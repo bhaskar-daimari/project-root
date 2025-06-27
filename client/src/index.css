@@ -1,0 +1,41 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Anchor tag reset */
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Make sure html and body do not cause horizontal scroll */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Container to keep content inside viewport */
+.container {
+  width: 100%;       /* Full width relative to parent */
+  max-width: 100%;   /* Prevent growing larger than viewport */
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow-x: hidden; /* Hide any horizontal overflow */
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Flex children shrink properly */
+.flex-child {
+  min-width: 0;
+}

@@ -1,0 +1,70 @@
+.Hstyle{
+  background-color: hsl(340, 100%, 97%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+  width: 100%;
+  margin: 0;
+  position: relative;
+  border-bottom: 2px solid #f3c6d3;
+}
+
+.Hstyle .Sname{
+  color: rgb(201, 64, 117);
+  font-size: 28px;     
+  font-weight: bold;
+  font-family: Verdana;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #cc6699;
+}
+
+.Hstyle .Slogo{
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.icons {
+  display: flex;
+  gap: 2rem;
+  /* margin-top: 1rem; */
+  /* filter:saturate(200%); */
+  background-color: hsl(340, 100%, 97%);
+  border-bottom: 2px solid #f3c6d3;
+  
+  
+}
+
+.icons .pfp {
+
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+   filter: saturate(900%);
+  fill: rgb(201,64,117);
+}
+
+.icons .cart{
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+   transition: all 0.3s ease;
+  margin-top: 2rem;
+  
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.Header{
+  display: flex;
+}
+
