@@ -1,0 +1,47 @@
+
+.login-info {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #eee;
+  margin-top: 2rem;
+}
+
+.login-info h2 {
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-update {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-discard {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+.btn-edit {
+  background-color: #ffd7ea;
+  color: #000;
+}

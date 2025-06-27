@@ -1,0 +1,128 @@
+
+/* === Auth Page Container === */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff0f5; /* soft pastel pink */
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+/* === Main Card === */
+.main-content {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(243, 193, 208, 0.2);
+  border: 1px solid #f3dce4;
+}
+
+/* === Branding === */
+.branding {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e78ca9;
+  margin-bottom: 6px;
+}
+
+.brand-subtitle {
+  font-size: 1rem;
+  color: #999;
+}
+
+/* === Form === */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  padding: 12px 16px;
+  border: 1px solid #f0c8d0;
+  border-radius: 12px;
+  background-color: #fff9fb;
+  font-size: 1rem;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #e78ca9;
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* === Submit Button === */
+.submit-button {
+  padding: 12px;
+  background-color: #e78ca9;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #d26f94;
+}
+
+.submit-button:disabled {
+  background-color: #f3c4d4;
+  cursor: not-allowed;
+}
+
+/* === Auth Link (bottom) === */
+.auth-link {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #e78ca9;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 4px;
+  padding: 0;
+}
+
+.link-button:hover {
+  color: #d26f94;
+}
+
+/* === Error Message === */
+.error-message {
+  color: #e74c3c;
+  background-color: #fdecec;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}

@@ -1,7 +1,7 @@
 // src/components/Auth/Signup.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Auth.css";
+import "./signup.css"; // Using File 1's CSS (you can change to Auth.css if preferred)
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -18,10 +18,12 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
+
     try {
       const res = await fetch("http://localhost:5000/api/auth/signup", {
         method: "POST",

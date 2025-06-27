@@ -1,0 +1,85 @@
+
+.checkout-container {
+  background-color: #fff1f4; /* soft pink background */
+  min-height: 100vh;
+  padding: 40px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.billing-form,
+.order-summary {
+  background-color: #ffe4ec;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(244, 114, 182, 0.1);
+  color: #333;
+  width: 48%;
+  box-sizing: border-box;
+}
+
+/* Form fields */
+.billing-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #f8c4d9;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Submit button */
+.billing-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ec4899;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.billing-form button:hover {
+  background-color: #db2777;
+}
+
+.order-summary h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d63384;
+  font-size: 22px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.summary-item.total {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #be185d;
+}
+
