@@ -1,7 +1,8 @@
-// src/components/Auth/LogoutButton.jsx
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
+import LogoutButton from '../Auth/LogoutButton'; // Adjust the import path accordingly
 
 export default function Profile() {
   const [profileData, setProfileData] = useState(null);

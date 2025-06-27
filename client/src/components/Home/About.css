@@ -1,76 +1,83 @@
-
 .about-container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 3rem;
-  background-color: #fff0f6;
-  padding: 5rem; /* shorthand for all sides */
   flex-wrap: wrap;
-  width: 100%; /* <-- Changed from 100vw */
-  box-sizing: border-box; /* ensures padding doesn't add width */
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #fff0f6;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .logo-container {
-  flex: 0 0 auto;
+  flex: 1 1 300px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 7rem;
-  
-  padding-left: 5vw;
-  /* padding-right: 10vw; */
+  align-items: center;
+  padding: 2rem;
 }
 
 .about-logo {
-  width: 400px;
+  width: 300px;
   height: auto;
   border-radius: 50%;
-  position: relative;
-  transform: translateY(-65px);
+  max-width: 100%;
 }
 
 .about-text {
-  display: inline-block;
-  flex: 1;
-  /* padding-left: 6%; */
+  flex: 2 1 400px;
+  padding: 2rem;
   color: #333;
   font-family: 'Georgia', cursive;
-  text-align: left;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
+  text-align: left;
 }
 
-.atext{
-  padding-left: 20px;
-  width: 500px;
-  display: inline-flex;
-  flex-direction: column;
-  margin-left: 250px;
-}
-
-
-.about-text div h2 {
-  font-family: "Georgia", serif;
+.about-text h2 {
   font-size: 2rem;
   color: #c94075;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: "Georgia", serif;
 }
-/* Add a keyframe for sliding in */
+
+.atext {
+  max-width: 600px;
+}
+
 @keyframes slideIn {
   0% {
     opacity: 0;
-    transform: translateX(-100px);  /* start slightly left */
+    transform: translateX(-100px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);       /* end at original position */
+    transform: translateX(0);
   }
 }
 
-/* Apply to the about-text */
 .about-text {
   animation: slideIn 1s ease-out forwards;
-  /* ... other styles from earlier ... */
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .about-text, .logo-container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .about-logo {
+    width: 200px;
+  }
+}

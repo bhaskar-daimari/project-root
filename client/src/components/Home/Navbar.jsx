@@ -1,6 +1,6 @@
 // src/components/Home/Navbar.jsx
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./Navbar.css";
 
@@ -11,6 +11,22 @@ import menu_icon from "../../assets/menuicon.png";
 export default function NavBar() {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  const handleProfileClick = () => {
+    if (user) {
+      navigate("/profile");
+    } else {
+      navigate("/signin");
+    }
+  };
+
+  const handleCartClick = () => {
+    if (user) {
+      navigate("/cart");
+    } else {
+      navigate("/signin");
+    }
+  };
 
   const handleLogout = () => {
     logout();
@@ -28,29 +44,22 @@ export default function NavBar() {
       </div>
 
       <div className="nav-icons">
-        {user ? (
-          <>
-            {/* Profile icon REMOVED here for logged-in users */}
-            {/* <Link to="/profile">
-              <img src={pink_pfp} alt="profile" />
-            </Link> */}
-            <Link to="/cart">
-              <img src={pink_cart} alt="cart" />
-            </Link>
-            <button onClick={handleLogout} className="logout-button">
-              Logout
-            </button>
-          </>
-        ) : (
-          <>
-            {/* Show profile icon for NOT logged in users */}
-            <Link to="/signin">
-              <img src={pink_pfp} alt="profile" />
-            </Link>
-            <Link to="/signin">
-              <img src={pink_cart} alt="cart" />
-            </Link>
-          </>
+        <img
+          src={pink_pfp}
+          alt="profile"
+          onClick={handleProfileClick}
+          style={{ cursor: "pointer" }}
+        />
+        <img
+          src={pink_cart}
+          alt="cart"
+          onClick={handleCartClick}
+          style={{ cursor: "pointer" }}
+        />
+        {user && (
+          <button onClick={handleLogout} className="logout-button">
+            Logout
+          </button>
         )}
       </div>
     </nav>
