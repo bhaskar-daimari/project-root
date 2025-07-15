@@ -1,3 +1,4 @@
+// server/controllers/authController.js
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -13,7 +14,7 @@ exports.signup = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    user = new User({ email, password: hashedPassword });
+    user = new User({ email, password: hashedPassword, role: 'user' }); // ✅ Add role here if needed
     await user.save();
 
     res.status(201).json({ msg: 'User created successfully' });
@@ -32,8 +33,13 @@ exports.login = async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ msg: 'Invalid credentials' });
 
-    const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '1h' });
-    res.json({ token, user: { email: user.email, id: user._id } }); // Send user info + token
+    // ✅ Token contains userId and role
+    const token = jwt.sign({ userId: user._id, role: user.role }, JWT_SECRET, { expiresIn: '1h' });
+
+    res.json({
+      token,
+      user: { email: user.email, id: user._id, role: user.role }, // ✅ include role
+    });
   } catch (err) {
     console.error(err.message);
     res.status(500).json({ msg: 'Server error' });

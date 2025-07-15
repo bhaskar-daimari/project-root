@@ -12,7 +12,9 @@ export function AuthProvider({ children }) {
     const userData = localStorage.getItem("user");
 
     if (token && userData) {
-      setUser({ ...JSON.parse(userData), token });
+    const parsedUser = JSON.parse(userData);
+    console.log("🚀 User loaded from localStorage:", parsedUser); // ✅ debug
+    setUser({ ...parsedUser, token });
     }
 
     setLoading(false); // Set loading to false once checked

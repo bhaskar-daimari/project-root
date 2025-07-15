@@ -3,6 +3,13 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Checkout from "./components/Checkout/Checkout";
 
+// Admin Pages
+import AdminDashboard from "./components/Admin/AdminDashboard";
+import AdminRoute from "./components/Admin/AdminRoute";
+import ManageProducts from "./components/Admin/ManageProducts";
+import ManageUsers from "./components/Admin/ManageUsers";
+import ManageOrders from "./components/Admin/ManageOrders";
+
 // Components
 import Navbar from "./components/Home/Navbar";
 import Home from "./Home";
@@ -67,6 +74,11 @@ function AppWrapper() {
             </PrivateRoute>
           }
         />
+
+        <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
+        <Route path="/admin/products" element={<AdminRoute><ManageProducts /></AdminRoute>} />
+        <Route path="/admin/users" element={<AdminRoute><ManageUsers /></AdminRoute>} />
+        <Route path="/admin/orders" element={<AdminRoute><ManageOrders /></AdminRoute>} />
 
         <Route path="/categories/bouquet" element={<Bouquet />} />
         <Route path="/categories/phonecharm" element={<Phonecharm />} />

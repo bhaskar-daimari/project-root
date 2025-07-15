@@ -11,6 +11,10 @@ import Navbar from '../../components/Navbar/Navbar'
 import img1 from '../../assets/Bagcharm/peachcharm.jpg'
 import img2 from '../../assets/Bagcharm/starcharm.jpg'
 import img3 from '../../assets/Bagcharm/Bowbutterfly.jpg'
+import swirl from "../../assets/swirl.png";
+import miffy from "../../assets/miffy.png";
+import strawberry from "../../assets/strawberry.png";
+import star from "../../assets/star.png";
 
 
 
